@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>CLICKS COUNTER</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<style type="text/css">
+body{
+    text-align:center;
+    font-family:cursive;
+    font-size:25px;
+    }
+    
+    div{
+    font-size:200px;
+    }
+}
+h1{
+    text-align:center;
+    border:10px;
+    
+}
+button{
+    font-family:Times New Roman;
+    border-radius:17px;
+    padding:10px 10px;
+    box-shadow:.10px .10px 5px 5px white;
+    background-color:white;
+}
+</style>
+<h1>CLICKS COUNTER</H1>
+<body id="hey">
+<label>NAME:<p id="nae"></p></label>
+<p id="emoj" style="font-size:40px;"></p>
+<div id="count">0</div>
+<br/>
+<button id="butt"onclick="clic()">CLICK HERE </button>
+<script>
+var step=0;
+var nam=prompt("ENTER YOUR NAME");
+document.getElementById("nae").innerHTML=nam;
+function clic(){
+    step+=1;
+    var arr=new Array("linear-gradient(white,silver,grey)","linear-gradient(white,red,grey,maroon)","linear-gradient(blue,yellow,olive)","linear-gradient(lime,green,violet)","linear-gradient(aqua,teal,purple)","linear-gradient(blue,navy,black)","linear-gradient(fuchsia,purple,navy)","linear-gradient(indigo,purple,maroon)","linear-gradient(grey,red,olive)","linear-gradient(maroon,yellow,indigo)","linear-gradient(olive,lime,cyan)","linear-gradient(silver,lime,green)","linear-gradient(silver,aqua,teal)","linear-gradient(white,silver,grey,navy)","linear-gradient(white,silver,grey,fuchsia,purple)","linear-gradient(indigo,purple,navy)","linear-gradient(purple,fuchsia,blue)","linear-gradient(teal,aqua,green)","linear-gradient(yelow,olive,lime)","linear-gradient(green,aqua,teal)","linear-gradient(indigo,blue,red)");
+var rand=Math.floor(Math.random()*22);
+document.getElementById('hey').style.backgroundImage=arr[rand];
+document.getElementById("count").innerHTML=step;
+switch(step)
+{
+    case 143: document.getElementById("emoj").innerHTML="💝❤️🧡💘💖";
+    break;
+    case 144: document.getElementById("emoj").innerHTML=" ";
+    break;
+    case 420: document.getElementById("emoj").innerHTML="🖕🖕🖕🖕🖕";
+    break;
+    case 421:document.getElementById("emoj").innerHTML=" ";
+    break;
+}
+
+}
+
+</script>
+</body>
+</html>
